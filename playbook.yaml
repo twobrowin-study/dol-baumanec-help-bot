@@ -8,8 +8,8 @@
 
     - name: Run bot docker service
       docker_swarm_service:
-        name: dol-baumanec-med-bot
-        image: twobrowin/dol-baumanec-med-bot:1.1.0
+        name: dol-baumanec-help-bot
+        image: twobrowin/dol-baumanec-help-bot:1.0.0
         env:
           TZ: "Europe/Moscow"
           
