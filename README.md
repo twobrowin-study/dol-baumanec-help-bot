@@ -14,13 +14,7 @@
 
 `docker push twobrowin/spreadsheet-bot:latest`
 
-`ansible-playbook playbook.yaml -i hosts.ini`
-
-Требуются дополнительные файлы:
-
-* `hosts.ini` - описание подключение к хосту для развёртывания бота
-
-* `secrets.yaml` - переменные `bot_token`, `sheet_acc_json`, `sheets_link`
+`ansible-playbook playbook.yaml -i inventory.yaml`
 
 ## Переменные окружения для запуска приложения
 
