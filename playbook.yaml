@@ -13,7 +13,7 @@
     - name: Run bot docker service
       docker_swarm_service:
         name: dol-baumanec-help-bot
-        image: twobrowin/dol-baumanec-help-bot:1.0.0
+        image: twobrowin/dol-baumanec-help-bot:1.0.4
         env:
           TZ: "Europe/Moscow"
           

@@ -45,7 +45,7 @@ UsersAdapterClass.DataAvaliableInputFilter = Users.IsDataAvaliableFilter & Users
 UsersAdapterClass.KeyboardDataAvaliableKeyInputFilter = Users.DataAvaliableInputFilter & Users.InputInKeyboardKeysClass(outer_obj=Users)
 
 async def start_registration_handler(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.message.reply_markdown(Settings.start_template, reply_markup=Keyboard.reply_keyboard)
+    await update.message.reply_markdown(Settings.data_unavaliable, reply_markup=ReplyKeyboardRemove())
     await self.register_user(update.effective_chat.id, update.effective_chat.username)
 UsersAdapterClass.start_registration_handler = start_registration_handler
 
@@ -59,7 +59,7 @@ async def register_user(self, uid: str|int, username: str) -> None:
         datetime      = datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         username      = username,
         is_bot_banned = I18n.no,
-        is_active     = I18n.yes,
+        is_active     = I18n.no,
     )
 UsersAdapterClass.register_user = register_user
 

@@ -22,6 +22,7 @@ from spreadsheetbot.sheets import (
 from spreadsheetbot.basic import Log, INFO, DEBUG
 from spreadsheetbot.basic.handlers import ErrorHandlerFun, ChatMemberHandlerFun
 
+from ext.abstract import AbstractSheetAdapter
 from ext.keyboard import KeyboardAdapterClass
 from ext.users import UsersAdapterClass
 from ext.switch import SwitchAdapterClass

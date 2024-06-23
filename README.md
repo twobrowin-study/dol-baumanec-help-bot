@@ -10,11 +10,11 @@
 
 ## Сборка и запуск Docker контейнера
 
-`docker build -t twobrowin/spreadsheet-bot:latest .`
+```bash
+docker build --push -t twobrowin/dol-baumanec-help-bot:latest .
 
-`docker push twobrowin/spreadsheet-bot:latest`
-
-`ansible-playbook playbook.yaml -i inventory.yaml`
+ansible-playbook playbook.yaml -i inventory.yaml
+```
 
 ## Переменные окружения для запуска приложения
 
