@@ -4,7 +4,7 @@
   gather_facts: false
   roles:
     - role: bmstu.vats.init
-      vault_path_inventory: bots/data/deploy,inventory-secrets.yaml
+      vault_path_inventory: boxed-bots/data/main,inventory-secrets.yaml
       vault_path_secrets:   bots/data/baumanec,helper-2024.yaml
   tasks:
     - name: Init a new swarm with default parameters
