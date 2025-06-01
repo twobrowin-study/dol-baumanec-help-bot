@@ -8,13 +8,17 @@
 
 Для запуска в режиме отладки могут использоваться флаги `debug`, `--debug`, `-D`.
 
-## Сборка и запуск Docker контейнера
+## Сборка Docker контейнера
 
 ```bash
 docker build --push -t twobrowin/dol-baumanec-help-bot:latest .
-
-ansible-playbook playbook.yaml -i inventory.yaml
 ```
+
+## Запуск в Kubernetes
+
+`helm upgrade --install --debug -n baumanec dol-baumanec-help-bot-2025 ./charts`
+
+Требуются создать секрет `dol-baumanec-help-bot-2025` в неймспейсе `baumanec`
 
 ## Переменные окружения для запуска приложения
 
